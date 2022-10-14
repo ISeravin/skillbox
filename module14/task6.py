@@ -1,7 +1,6 @@
 #Задача 6. Монетка 2
 def test_point(x, y, rad):
-    rad /= 2
-    if rad <= x <= rad and rad <= y <= rad:
+    if rad >= ((x ** 2 + y ** 2) ** 0.5):
         print("Монетка где-то рядом")
     else:
         print("Монетки в области нет")
