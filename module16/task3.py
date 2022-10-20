@@ -4,8 +4,11 @@
 shop = [['каретка', 1200], ['шатун', 1000], ['седло', 300], ['педаль', 100], 
         ['седло', 1500], ['рама', 12000], ['обод', 2000], ['шатун', 200], ['седло', 2700]]
         
-
-str = input("Название детали: ")
+count, summa = 0, 0
+str_input = input("Название детали: ")
 for i_el in range(len(shop)):
-    count_el = shop[i_el].count(str)
-print("Кол-во деталей —", count_el)
+    if shop[i_el][0] == str_input:
+        summa += shop[i_el][1]
+        count += 1
+print("Кол-во деталей —", count)
+print("Общая стоимость —", summa)
